@@ -4,6 +4,7 @@ import {SectionTitle} from "../../../componrnts/SectionTitle";
 import {Icon} from "../../../componrnts/icon/Icon";
 import {Slider} from "../../../componrnts/slider/Slider";
 import {FlexWrapper} from "../../../componrnts/FlexWrapper";
+import {IconWrapper} from "../skills/skill/Skill";
 
 export const Testimony = () => {
     let quoteAltRight;
@@ -11,7 +12,9 @@ export const Testimony = () => {
         <StyledTestimony>
             <SectionTitle>Testimony</SectionTitle>
             <FlexWrapper direction={"column"} align={"center"}>
+                <IconWrapper>
                 <Icon iconId={"quote"}/>
+                </IconWrapper>
                 <Slider/>
             </FlexWrapper>
         </StyledTestimony>
@@ -19,6 +22,10 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-  background-color: hotpink;
+  background-color: #f3a4ca;
   min-height: 50vh;
+  
+  ${IconWrapper}{
+    margin: 40px 0 72px;
+  }
 `
