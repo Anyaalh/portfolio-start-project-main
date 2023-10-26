@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {theme} from "../../../../styles/Theme";
 import {Link} from "../../../../componrnts/Link";
 
 
@@ -19,11 +18,14 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledTabMenu = styled.nav`
-  margin-bottom: 40px;
+
   ul {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 352px;
+    width: 100%;
+    //border: 1px solid red;
+    margin: 0 auto 40px;
   }
 `
 

@@ -5,18 +5,21 @@ import {Icon} from "../../../componrnts/icon/Icon";
 import {Slider} from "../../../componrnts/slider/Slider";
 import {FlexWrapper} from "../../../componrnts/FlexWrapper";
 import {IconWrapper} from "../skills/skill/Skill";
+import {Container} from "../../../componrnts/Container";
 
 export const Testimony = () => {
-    let quoteAltRight;
+
     return (
         <StyledTestimony>
-            <SectionTitle>Testimony</SectionTitle>
-            <FlexWrapper direction={"column"} align={"center"}>
-                <IconWrapper>
-                <Icon iconId={"quote"}/>
-                </IconWrapper>
-                <Slider/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>Testimony</SectionTitle>
+                <FlexWrapper direction={"column"} align={"center"}>
+                    <IconWrapper>
+                        <Icon iconId={"quote"}/>
+                    </IconWrapper>
+                    <Slider/>
+                </FlexWrapper>
+            </Container>
         </StyledTestimony>
     );
 };
