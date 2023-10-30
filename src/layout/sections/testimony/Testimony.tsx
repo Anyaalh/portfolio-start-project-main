@@ -4,19 +4,19 @@ import {SectionTitle} from "../../../componrnts/SectionTitle";
 import {Icon} from "../../../componrnts/icon/Icon";
 import {Slider} from "../../../componrnts/slider/Slider";
 import {FlexWrapper} from "../../../componrnts/FlexWrapper";
-import {IconWrapper} from "../skills/skill/Skill";
 import {Container} from "../../../componrnts/Container";
+import {S} from "../skills/Skills_Styles"
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
 
     return (
         <StyledTestimony>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>
-                    <IconWrapper>
+                    <S.IconWrapper>
                         <Icon iconId={"quote"}/>
-                    </IconWrapper>
+                    </S.IconWrapper>
                     <Slider/>
                 </FlexWrapper>
             </Container>
@@ -28,7 +28,7 @@ const StyledTestimony = styled.section`
   background-color: #f3a4ca;
   min-height: 50vh;
   
-  ${IconWrapper}{
+  ${S.IconWrapper}{
     margin: 40px 0 72px;
   }
 `

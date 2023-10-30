@@ -2,11 +2,10 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../componrnts/SectionTitle";
 import {Button} from "../../../componrnts/Button";
-import {Comparator} from "semver";
 import {Container} from "../../../componrnts/Container";
 import {FlexWrapper} from "../../../componrnts/FlexWrapper";
 
-export const Slogan = () => {
+export const Slogan: React.FC = () => {
     return (
         <StyledSlogan>
             <Container>

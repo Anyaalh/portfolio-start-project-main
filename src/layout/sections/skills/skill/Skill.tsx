@@ -1,8 +1,7 @@
 import React from 'react';
 import {Icon} from "../../../../componrnts/icon/Icon";
-import styled from "styled-components";
 import {FlexWrapper} from "../../../../componrnts/FlexWrapper";
-import {theme} from "../../../../styles/Theme";
+import {S} from "../Skills_Styles"
 
 type SkillPropstype ={
     iconId: string
@@ -13,53 +12,17 @@ type SkillPropstype ={
 
 export const Skill = (props: SkillPropstype) => {
     return (
-        <StyledSkill>
+        <S.Skill>
             <FlexWrapper direction={"column"} align={"center"}>
 
-                <IconWrapper>
+                <S.IconWrapper>
                     <Icon iconId={props.iconId}/>
-                </IconWrapper>
+                </S.IconWrapper>
 
-                <SkillTitle>{props.title}</SkillTitle>
-                <SkillText>{props.description}</SkillText>
+                <S.SkillTitle>{props.title}</S.SkillTitle>
+                <S.SkillText>{props.description}</S.SkillText>
             </FlexWrapper>
-        </StyledSkill>
+        </S.Skill>
     );
 };
 
-const StyledSkill = styled.div`
-  width: 330px;
-  flex-grow: 1;
-  padding: 62px 20px 40px;
-  
-  @media ${theme.media.mobile}{
-    padding: 62px 0 40px;
-  }
-  
-`
-
-export const IconWrapper=styled.div`
-position: relative;
-  
-  &::before{
-    content: "";
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    transform: rotate(45deg) translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.10);
-    position: absolute;
-    left: 50%;
-    top:50%;
-    transform-origin: top left;
-  }
-`
-
-const SkillTitle = styled.h3`
-  margin: 70px 0 15px;
-  text-transform: uppercase;
-`
-
-const SkillText = styled.p`
-  text-align: center;
-`
