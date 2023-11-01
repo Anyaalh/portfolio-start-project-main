@@ -7,7 +7,7 @@ import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
 import {S} from"./Header_styles"
 
 
-const items = ["Home", "Skills", "Works", "Testimony", "Contact"]
+
 
 export const Header: React.FC = () => {
 
@@ -25,8 +25,8 @@ export const Header: React.FC = () => {
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                 <Logo/>
-                    {width < breakpoint ? <MobileMenu menuItems={items}/>
-                                        : <DesktopMenu menuItems={items}/>}
+                    {width < breakpoint ? <MobileMenu />
+                                        : <DesktopMenu />}
                 </FlexWrapper>
             </Container>
         </S.Header>

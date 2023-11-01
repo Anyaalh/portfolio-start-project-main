@@ -2,7 +2,7 @@ import {theme} from "../../../styles/Theme";
 import styled from "styled-components";
 
 const Contacts = styled.section`
-    
+  position: relative;
 `
 
 const Form = styled.form`

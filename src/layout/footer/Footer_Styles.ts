@@ -5,6 +5,7 @@ import {font} from "../../styles/Common";
 const Footer = styled.footer`
   background-color: ${theme.colors.primaryBg};
   padding: 40px 0;
+  position: relative;
 `
 
 const Name = styled.span`
@@ -27,7 +28,7 @@ const SocialLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transition: ${theme.animations.transaction};
   color: ${theme.colors.accent};
 
   &:hover {

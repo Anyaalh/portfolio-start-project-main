@@ -2,14 +2,22 @@ import React from 'react';
 import styled from "styled-components";
 import {Link} from "../../../../componrnts/Link";
 
+export type TabsStatusType = "all" | "landing" | "react" | "spa"
 
-export const TabMenu = (props: { menuItems: Array<string> }) => {
+type TabMenuPropsType = {
+    tabsItems: Array<{title: string, status: TabsStatusType}>
+    changeFilterStatus: (value: TabsStatusType) => void
+    currentFilterStatus: string
+}
+
+
+export const TabMenu = (props: TabMenuPropsType) => {
     return (
         <StyledTabMenu>
             <ul>
-                {props.menuItems.map((item, index) => {
+                {props.tabsItems.map((item, index) => {
                     return <ListItem key={index}>
-                        <Link href="">{item}</Link>
+                        <Link active={props.currentFilterStatus === item.status} as={"button"} onClick={() => {props.changeFilterStatus(item.status)}}>{item.title}</Link>
                     </ListItem>
                 })}
             </ul>
@@ -24,7 +32,6 @@ const StyledTabMenu = styled.nav`
     justify-content: space-between;
     max-width: 352px;
     width: 100%;
-    //border: 1px solid red;
     margin: 0 auto 40px;
   }
 `
